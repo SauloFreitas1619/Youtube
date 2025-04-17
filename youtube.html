@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Alee - PARTY Ft. Klisman & Anezzi - YouTube </title>
+  <link rel="icon" href="youtube.png" type="image/icone">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+      <span style="font-size: 14px;">BR</span>
+    </div>
+    <form class="search-bar">
+      <input type="text" placeholder="Pesquisar">
+      <button>🔍</button>
+    </form>
+    <div class="profile">
+      <img src="perfil.jpg" alt="Perfil">
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="video-section">
+      <div class="video-thumbnail">
+        <video width="850" height="350"  controls>
+          <source src="ALEE - PARTY Ft. KLISMAN & ANEZZI.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução de vídeo.
+        </video></div>
+      <div class="video-info">
+        <div class="video-title">ALEE - PARTY Ft. KLISMAN & ANEZZI</div>
+        <div class="channel-name">Alee - 67,5 mil inscritos</div>
+        <div class="actions">
+          <button>👍 Like</button>
+          <button>👎 Deslike</button>
+          <button onclick="mostrarComentarios()">💬 Comentários</button>
+        </div>
+      </div>
+
+      <div class="comments" id="comentarios" style="display: none;">
+        <h3>Comentários</h3>
+        <div class="comment"><strong>@mano_trap:</strong> esse álbum tá insanoooo 🔥🔥🔥</div>
+        <div class="comment"><strong>@clara.silva:</strong> ouvi no repeat, perfeito demais 💖</div>
+        <div class="comment"><strong>@jeffzao22:</strong> produção de outro nível!</div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="ad">
+        <strong>Anúncio</strong><br>
+          Jogo do Tigrinho<br>
+      Depósitos a partir de R$0,50
+      </div>
+      <div class="shorts">
+        <h3>Shorts</h3>
+        <div class="short">🎬 O CRIS NÃO REPROVOU NA PROVA</div>
+        <div class="short">🎤 É o Gloria Groove?</div>
+        <div class="short">🔥 CHEGANDO NO TETO NA LIVE</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+let firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('ytplayer');
+}
+
+function mostrarComentarios() {
+  const box = document.getElementById('comentarios');
+  box.style.display = box.style.display == 'none' ? 'block' : 'none';
+}
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
